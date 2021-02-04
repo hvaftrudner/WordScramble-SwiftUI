@@ -13,6 +13,7 @@
 		E092224A25CB88F500FBFA9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E092224925CB88F500FBFA9A /* Assets.xcassets */; };
 		E092224D25CB88F500FBFA9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E092224C25CB88F500FBFA9A /* Preview Assets.xcassets */; };
 		E092225025CB88F500FBFA9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E092224E25CB88F500FBFA9A /* LaunchScreen.storyboard */; };
+		E092225A25CB963600FBFA9A /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = E092225925CB963600FBFA9A /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E092224C25CB88F500FBFA9A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E092224F25CB88F500FBFA9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E092225125CB88F500FBFA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E092225925CB963600FBFA9A /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				E092224925CB88F500FBFA9A /* Assets.xcassets */,
 				E092224E25CB88F500FBFA9A /* LaunchScreen.storyboard */,
 				E092225125CB88F500FBFA9A /* Info.plist */,
+				E092225925CB963600FBFA9A /* start.txt */,
 				E092224B25CB88F500FBFA9A /* Preview Content */,
 			);
 			path = WordScramble;
@@ -133,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E092225025CB88F500FBFA9A /* LaunchScreen.storyboard in Resources */,
+				E092225A25CB963600FBFA9A /* start.txt in Resources */,
 				E092224D25CB88F500FBFA9A /* Preview Assets.xcassets in Resources */,
 				E092224A25CB88F500FBFA9A /* Assets.xcassets in Resources */,
 			);
