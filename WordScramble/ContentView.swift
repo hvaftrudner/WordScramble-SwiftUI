@@ -19,6 +19,8 @@ struct ContentView: View {
     
     @State private var scoreCount = 0
     
+    let colors: [Color] = [.red, .blue, .green, .yellow, .pink, .purple, .orange]
+    
     var body: some View {
     
         NavigationView{
@@ -28,9 +30,30 @@ struct ContentView: View {
                     .autocapitalization(.none)
                     .padding()
                 
-                List(usedWords, id: \.self){
-                    Image(systemName: "\($0.count).circle")
-                    Text("\($0)")
+                //Geo challenge 2 & 3
+                
+                List(usedWords, id: \.self){ word in
+                    GeometryReader { geo in
+                        HStack{
+                            Image(systemName: "\(word.count).circle")
+                                //.foregroundColor(colors[usedWords.lastIndex(of: word)! % 7])
+                                .foregroundColor(Color(
+                                    red: Double(geo.frame(in: .global).midY / geo.frame(in: .global).maxY),
+                                    green: 0.5,
+                                    blue: Double((geo.frame(in: .global).midY / geo.size.height) / 20) - 1)
+                                )
+                            Text("\(word)")
+                        }
+                        .offset(x: geo.frame(in: .global).minY > 600 ? CGFloat( usedWords.lastIndex(of: word)! * 4) : 0, y: 0)
+                        //testing
+                        .onTapGesture {
+                            print(Double(geo.frame(in: .global).midY / geo.frame(in: .global).maxY))
+                            print((geo.frame(in: .global).midY / geo.size.height) / 10)
+                        }
+                        
+                        .accessibilityElement(children: .ignore)
+                        .accessibility(label: Text("\(word), \(word.count) letters"))
+                    }
                 }
                 
                 Text("Score: \(scoreCount)")
